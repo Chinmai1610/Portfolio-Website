@@ -91,7 +91,11 @@ Made with ❤️ by Chinmai J
 ## Screenshots
 
 <img width="1854" height="878" alt="Screenshot 2026-03-03 214732" src="https://github.com/user-attachments/assets/74045c02-e308-4fb4-a95d-a2dd842104b0" />
-<img width="1881" height="567" alt="Screenshot 2026-03-03 214750" src="https://github.com/user-attachments/assets/517d0383-3baf-4f64-95f4-63e9ed989aef" />
+<img width="1920" height="1008" alt="Screenshot 2026-03-03 220232" src="https://github.com/user-attachments/assets/d3ff2e0e-f18a-4493-864b-2d65fb2fc57f" />
+<img width="1920" height="1008" alt="Screenshot 2026-03-03 220239" src="https://github.com/user-attachments/assets/324ad281-70ea-477d-9d9b-9b975b74cf97" />
+<img width="1920" height="1008" alt="Screenshot 2026-03-03 220245" src="https://github.com/user-attachments/assets/89cefa29-f51f-4906-89f5-8ce5ecf451af" />
+
+
 <img width="1920" height="1008" alt="Screenshot 2026-03-03 214859" src="https://github.com/user-attachments/assets/728388cc-ae33-45fa-b4da-7434a0ecb6ce" />
 <img width="1920" height="1008" alt="Screenshot 2026-03-03 214916" src="https://github.com/user-attachments/assets/aa3365d2-2e14-49c3-a454-56daa01561f1" />
 
