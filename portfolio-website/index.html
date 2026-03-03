@@ -23,7 +23,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Fix 1: Added standard background-clip for compatibility */
         .brand-box {
             font-weight: 800;
             letter-spacing: 2px;
@@ -34,10 +33,7 @@
             font-size: 1.5rem;
         }
 
-        /* Fix 2: Moved inline color to CSS class */
-        .hero-highlight {
-            color: #a855f7;
-        }
+        .hero-highlight { color: #a855f7; }
 
         .hero-section {
             background: var(--dark-bg);
@@ -58,6 +54,7 @@
         .nav-link { color: #94a3b8 !important; transition: 0.3s; }
         .nav-link:hover, .nav-link.active { color: #6366f1 !important; }
 
+        .section-title { font-weight: 700; margin-bottom: 40px; }
         .section-title::after {
             content: '';
             display: block;
@@ -68,7 +65,11 @@
             border-radius: 2px;
         }
 
-        .edu-card { transition: all 0.3s ease; border: 1px solid #e2e8f0 !important; }
+        .edu-card, .info-card { 
+            transition: all 0.3s ease; 
+            border: 1px solid #e2e8f0 !important; 
+            background: white;
+        }
         .edu-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 
         .btn-custom {
@@ -80,7 +81,9 @@
             font-weight: 600;
             text-decoration: none;
             display: inline-block;
+            transition: 0.3s;
         }
+        .btn-custom:hover { opacity: 0.9; transform: scale(1.05); color: white; }
 
         .contact-link {
             text-decoration: none;
@@ -88,10 +91,22 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 10px;
+            padding: 12px;
+            border-radius: 8px;
             transition: 0.2s;
         }
-        .contact-link:hover { color: #6366f1; }
+        .contact-link:hover { background: #f1f5f9; color: #6366f1; }
+
+        .skill-badge {
+            background: #f1f5f9;
+            color: #6366f1;
+            padding: 8px 15px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -101,7 +116,7 @@
         <div class="container py-3 d-flex justify-content-between align-items-center">
             <div class="brand-box">CHINMAI J</div>
             <nav class="nav">
-                <a class="nav-link active" href="#hero">Home</a>
+                <a class="nav-link" href="#hero">Home</a>
                 <a class="nav-link" href="#about">About</a>
                 <a class="nav-link" href="#education">Education</a>
                 <a class="nav-link" href="#contact">Contact</a>
@@ -121,17 +136,96 @@
             </div>
         </section>
 
+        <section id="about" class="py-5">
+    <div class="container text-center">
+        <h2 class="section-title">About Me</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="info-card p-5 rounded-4 shadow-sm border-0 bg-white">
+                    <p class="fs-5 text-secondary leading-relaxed">
+                        I am a dedicated <strong>3rd-year Computer Science and Engineering</strong> student at 
+                        <span class="text-primary fw-bold">Mysuru Royal Institute of Technology</span>. 
+                        With a strong foundation in algorithmic thinking and a passion for 
+                        <strong>full-stack web development</strong>, I bridge the gap between complex 
+                        backend logic and intuitive user experiences.
+                    </p>
+                    <hr class="my-4 opacity-25">
+                    <p class="text-muted">
+                        Currently focusing on modern frameworks and AI integration, I am eager to apply my 
+                        technical skills in real-world environments and contribute to innovative software solutions.
+                    </p>
+                    <div class="mt-4">
+                        <span class="skill-badge">Problem Solving</span>
+                        <span class="skill-badge">UI/UX Design</span>
+                        <span class="skill-badge">Full-Stack Dev</span>
+                        <span class="skill-badge">AI Enthusiast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Academic Journey</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+                <div class="edu-card p-4 rounded-4 h-100 bg-white border-0 shadow-sm">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-graduation-cap fa-2x text-primary me-3"></i>
+                        <div>
+                            <h5 class="fw-bold mb-0">Bachelor of Engineering</h5>
+                            <small class="text-primary fw-600">Computer Science & Engineering</small>
+                        </div>
+                    </div>
+                    <p class="text-secondary mb-3">
+                        <strong>Mysuru Royal Institute of Technology</strong><br>
+                        Currently in 6th Semester (3rd Year). Maintaining a strong focus on Data Structures, 
+                        Web Technologies, and Database Management Systems.
+                    </p>
+                    <span class="badge bg-primary rounded-pill px-3">2022 - 2026 (Expected)</span>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="edu-card p-4 rounded-4 h-100 bg-white border-0 shadow-sm">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-school fa-2x text-secondary me-3"></i>
+                        <div>
+                            <h5 class="fw-bold mb-0">Pre-University Education</h5>
+                            <small class="text-secondary fw-600">PCMB Stream</small>
+                        </div>
+                    </div>
+                    <p class="text-secondary mb-3">
+                        <strong>BGS PU College</strong><br>
+                        Completed higher secondary education with a focus on Physics, Chemistry, 
+                        Mathematics, and Biology, laying the analytical foundation for my engineering career.
+                    </p>
+                    <span class="badge bg-secondary rounded-pill px-3">2020 - 2022</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         <section id="contact" class="py-5">
             <div class="container text-center">
                 <h2 class="section-title">Let's Connect</h2>
                 <div class="row justify-content-center mt-4">
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <div class="bg-white p-4 rounded-4 shadow-sm text-start">
-                            <a href="https://linkedin.com/in/chinmaicj1610/" target="_blank" rel="noopener" class="contact-link">
-                                <i class="fab fa-linkedin text-primary"></i> LinkedIn
+                            <a href="mailto:chinmaicj@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope text-danger"></i> chinmaicj@gmail.com
                             </a>
-                            <a href="https://github.com/in/Chinmai1610/" target="_blank" rel="noopener" class="contact-link">
-                                <i class="fab fa-github text-dark"></i> GitHub
+                            <a href="https://linkedin.com/in/chinmaicj1610/" target="_blank" rel="noopener" class="contact-link">
+                                <i class="fab fa-linkedin text-primary"></i> LinkedIn Profile
+                            </a>
+                            <a href="https://github.com/Chinmai1610/" target="_blank" rel="noopener" class="contact-link">
+                                <i class="fab fa-github text-dark"></i> GitHub Profile
+                            </a>
+                            <a href="https://huggingface.co/chinmaicj1610" target="_blank" rel="noopener" class="contact-link">
+                                <i class="fas fa-robot text-warning"></i> Hugging Face
                             </a>
                         </div>
                     </div>
@@ -141,8 +235,9 @@
     </main>
 
     <footer class="text-center py-4 bg-dark text-white-50">
-        <p class="mb-0 small">© 2026 CHINMAI J</p>
+        <p class="mb-0 small">© 2026 CHINMAI J | Built with Bootstrap 5</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
