@@ -6,100 +6,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHINMAI J | Portfolio</title>
 
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/icons/favicon.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --dark-bg: #0f172a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        /* Fix 1: Added standard background-clip for compatibility */
+        .brand-box {
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            font-size: 1.5rem;
+        }
+
+        /* Fix 2: Moved inline color to CSS class */
+        .hero-highlight {
+            color: #a855f7;
+        }
+
+        .hero-section {
+            background: var(--dark-bg);
+            color: white;
+            padding: 100px 0;
+            background-image: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%);
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #6366f1;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .nav-link { color: #94a3b8 !important; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #6366f1 !important; }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--primary-gradient);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .edu-card { transition: all 0.3s ease; border: 1px solid #e2e8f0 !important; }
+        .edu-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        .btn-custom {
+            background: var(--primary-gradient);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-link {
+            text-decoration: none;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            transition: 0.2s;
+        }
+        .contact-link:hover { color: #6366f1; }
+    </style>
 </head>
 
 <body>
 
-    <header class="text-center py-4 bg-dark text-white-50 border-top border-secondary">
-        <div class="header-top py-4">
-            <div class="container text-center">
-                <div class="navbar-brand-central mb-3">
-                    <span class="brand-box">CHINMAI J</span>
-                </div>
-                <div class="container">
-                    <nav class="nav justify-content-center">
-                        <a class="nav-link active" href="#about">About Me</a>
-                        <a class="nav-link" href="#education">Education</a>
-                        <a class="nav-link" href="pages/projects.html">Projects</a>
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </nav>
-                </div>
-            </div>
+    <header class="sticky-top bg-white shadow-sm">
+        <div class="container py-3 d-flex justify-content-between align-items-center">
+            <div class="brand-box">CHINMAI J</div>
+            <nav class="nav">
+                <a class="nav-link active" href="#hero">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#education">Education</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
 
     <main>
-        <section id="projects" class="container my-5">
-            <div class="container text-center py-5">
-                <img src="assets/images/profile.jpg" alt="Profile" class="profile-img">
-                <h1>Hi, I'm <span>Chinmai J</span></h1>
-                <p>Web Developer | CSE Student</p>
-                <div class="d-flex justify-content-center my-3">
-                    <a href="pages/projects.html" class="btn btn-primary">View Projects</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section-padding">
-            <div class="container about-container">
-                <h2 class="section-title text-center">About Me</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="edu-card p-6 border-2 rounded shadow-sm h-100 bg-white">
-                            <p class="text-center lead">
-                                I am a Computer Science and Engineering student with a strong interest in web development. I enjoy building responsive and user-friendly websites using HTML, CSS, Bootstrap, and JavaScript.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="section-padding bg-light">
+        <section id="hero" class="hero-section text-center">
             <div class="container">
-                <h2 class="section-title text-center">Education</h2>
-                <div class="row text-center mt-4">
-                    <div class="col-md-6 mb-4">
-                        <div class="edu-card p-4 border-0 rounded shadow-sm h-100 bg-white">
-                            <h4 class="color-blue fw-bold">Computer Science and Engineering</h4>
-                            <p class="text-muted">Mysuru Royal Institute of Technology</p>
-                            <span class="badge bg-primary">2022 - 2027</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="edu-card p-4 border-0 rounded shadow-sm h-100 bg-white">
-                            <h4 class="color-blue fw-bold">Science PU College</h4>
-                            <p class="text-muted">BGS PU College</p>
-                            <span class="badge bg-primary">2020 - 2022</span>
-                        </div>
-                    </div>
+                <img src="assets/images/profile.jpg" alt="Chinmai J" class="profile-img shadow">
+                <h1 class="display-4 fw-bold">Hi, I'm <span class="hero-highlight">Chinmai J</span></h1>
+                <p class="lead opacity-75">Web Developer | CSE Student</p>
+                <div class="mt-4">
+                    <a href="pages/projects.html" class="btn btn-custom">View My Work</a>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section-padding bg-light">
-            <div class="container">
-                <h2 class="section-title text-center">Contact</h2>
-                <div class="col-md-8 contact-info">
-                    <p><strong>Phone:</strong> +91 9876543210</p>
-                    <p><strong>Email:</strong> chinmaicj@gmail.com</p>
-                    <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/chinmaicj1610/</p>
-                    <p><strong>GitHub:</strong> https://github.com/chinmaicj1610/</p>
-                    <p><strong>HuggingFace:</strong> https://huggingface.co/chinmaicj1610</p>
+        <section id="contact" class="py-5">
+            <div class="container text-center">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-4">
+                        <div class="bg-white p-4 rounded-4 shadow-sm text-start">
+                            <a href="https://linkedin.com/in/chinmaicj1610/" target="_blank" rel="noopener" class="contact-link">
+                                <i class="fab fa-linkedin text-primary"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/in/Chinmai1610/" target="_blank" rel="noopener" class="contact-link">
+                                <i class="fab fa-github text-dark"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="text-center py-4 bg-dark text-white-50 border-top border-secondary">
-        <div class="container">
-            <p class="mb-0">© 2026 CHINMAI J | All Rights Reserved</p>
-        </div>
+    <footer class="text-center py-4 bg-dark text-white-50">
+        <p class="mb-0 small">© 2026 CHINMAI J</p>
     </footer>
 
 </body>
-
 </html>
